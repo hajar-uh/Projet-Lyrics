@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta charset="UTF-8">
+       <title>SEULS & VAINCUS - PROJET LYRICS</title>
+        <script src="js/jquery.js"></script>
+       <link rel="stylesheet" href="css/style-index.css">
+       <link rel="stylesheet" href="css/style-gauche.css">
+       <link rel="stylesheet" href="css/style-droite.css">
+       <link rel="stylesheet" href="css/style-haut.css">
+       <link rel="stylesheet" href="css/style-bas.css">
+
+       <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+       <script>
+        $("document").ready(function(){  /** Quand le document est prêt mettre en marche la fonction, $("SELECTEUR").QUESTQUONFAIT(fonction){})**/ 
+
+        $("#duhaut, #dubas, #degauche, #dedroite").hide();
+
+        $('.arrow-haut').click(function () {
+        $("#duhaut").slideToggle(400)
+        $("#degauche, #dedroite, #dubas").hide()
+        $('.texte-haut').toggle()
+        });
+        $('.arrow-bas').click(function () {
+        $("#dubas").slideToggle(400)
+        $("#degauche, #dedroite, #duhaut").hide()
+        });
+        $('.arrow-gauche').click(function () {
+        $("#degauche").slideToggle(400)
+        $("#duhaut, #dedroite, #dubas").hide()
+        });
+        $('.arrow-droite').click(function () {
+        $("#dedroite").slideToggle(400)
+        $("#degauche, #duhaut, #dubas").hide()
+        });
+        /*TEXTE QAUND LA SOURIS PASSE*/
+        $(".texte-haut, .texte-bas, .texte-droite, .texte-gauche").hide();
+        $(".arrow-haut").mouseenter(function() {
+            $(".texte-haut").show()
+        });
+        $(".arrow-bas").mouseenter(function() {
+            $(".texte-bas").show()
+        });
+        $(".arrow-gauche").mouseenter(function() {
+            $(".texte-gauche").show()
+        });
+        $(".arrow-droite").mouseenter(function() {
+            $(".texte-droite").show()
+        });
+        /*DISPARITION DU TEXTE*/
+        $(".arrow-haut").mouseleave(function() {
+            $(".texte-haut").hide()
+        });
+        $(".arrow-bas").mouseleave(function() {
+            $(".texte-bas").hide()
+        });
+        $(".arrow-gauche").mouseleave(function() {
+            $(".texte-gauche").hide()
+        });
+        $(".arrow-droite").mouseleave(function() {
+            $(".texte-droite").hide()
+        });
+        
+        $(".arrow-droite").click(function(){
+            $("body").css('overflow-y','hidden')
+        });
+        /*FLIP DE L'ARROW*/
+        $(".btn .fa-play-circle-o").on('click', function(){
+            $(this).hide();
+            $('.fa-pause-circle-o').fadeIn();
+            $('#myMusic')[0].play();
+        });
+
+    });
+        
+        //FIN MENU
+       </script>
+
+       <style>
+       </style>
+   </head> 
+
+   <body>
+       <div id="arrow">
+        <div class="arrow-haut"><span class="arrow arrow-top"></span></div>
+        <div class="arrow-gauche"><span class="arrow arrow-left"></span></div>
+        <div class="arrow-droite"><span class="arrow arrow-right"></span></div>
+        <div class="arrow-bas"><span class="arrow arrow-bottom"></span></div>
+        </div>
+
+    <div class="texte-haut"><p>Auteurs & interprètes</p></div>
+    <div class="texte-gauche"><p> A propos du Projet Lyrics</p></div>
+    <div class="texte-droite"><p> Crédits </p></div>
+    <div class="texte-bas"><p>Les paroles</p></div>   
+
+        <h1 class="titre">Seuls & <br> Vaincus</h1>
+
+    <div id="dubas">
+        
+        <!-- <div class="bg-music">
+            <audio id="myMusic" src="audio/seuls-et-vaincus.mp3" loop=""></audio>
+            <button class="btn">
+                <i class="fa fa-play-circle-o"></i>
+                <i class="fa fa-pause-circle-o"></i>
+            </button>
+        </div> -->
+             
+             <div class="content">
+                <div class="lyrics">
+                    <div class="parole">
+                    <p> <span class="p1"> Vous finirez seuls et vaincus, </span>sourds aux palpitations du monde
+                        <br>
+                        À ses hoquets, ses hauts ses bas, ses haussements d'épaules veules
+                        <br>
+                        Au recensement des ossements qui tapissent le fond des eaux
+                        <br>
+                        <br>
+                       <span> Vous finirez seuls et vaincus,</span> aveugles aux débris tenaces
+                        <br>
+                        De ces vies qui têtues s'enlacent, de ces amours qui ne se lassеnt
+                        <br>
+                        Même lacérées de sе hisser à la cime des songeries
+                        <br>
+                        <br>
+                       <span> Vous finirez seuls et vaincus, </span>grands éructants rudimentaires
+                        <br>
+                        Insouciants face à nos errances sur la rude écale de la Terre
+                        <br>
+                        Indifférents aux pulsations qui lâches laissent à l'espérance
+                        <br>
+                        <br>
+                       <span>Vous finirez seuls et vaincus </span> car longue longue est la mémoire
+                        <br>
+                        Des pieds des peaux des au-revoir, et de ces temps itinérants
+                        <br>
+                        Où devisant et divisant, vous créez un monde en noir et blanc
+                        <br>
+                        <br>
+                       <span> Vous finirez seuls et vaincus,</span> vos cris vos cors et vos crédos
+                        <br>
+                        Autorité en toc et broc ne sauront vous sauver de rien
+                        <br>
+                        L'éclat de nos vies entêtées éblouira vos en-dedans
+                        <br>
+                        <br>
+                        Et vos enfants joyeux et vifs feront rondes et farandoles
+                        <br>
+                        Avec nos enfants et leurs chants, et s'aimant sans y prendre garde
+                        <br>
+                        Vous puniront en vous offrant des petits-enfants chatoyants
+                        <br>
+                        <br>
+                       <span>Vous finirez seuls et vaincus</span>  car invincible est notre ardeur
+                        <br>
+                        Et si ardent notre présent, incandescent notre avenir
+                        <br>
+                        Grâce à la tendresse qui survit à ce passé simple et composé
+                        <br>
+                        <br>
+                        While you're holding on to your bones
+                        <br>
+                        Holding on to what you know
+                        <br>
+                        We won't make the same mistakes
+                        <br>
+                        Stakes are high we claim our fates
+                        <br>
+                        <br>
+                        While you're holding on to your bones <span> seuls</span>
+                        <br>
+                        Holding on to what you know
+                        <br>
+                        We won't make the same mistakes <span> seuls</span>
+                        <br>
+                        Stakes are high we claim our fates <span> vaincus</span>
+                        <br>
+                        <br>
+                        While you're holding on to your bones <span> seuls</span>
+                        <br>
+                        Holding on to what you know <span> vaincus</span>
+                        <br>
+                        We won't make the same mistakes <span> seuls</span>
+                        <br>
+                        Stakes are high we claim our fates
+                        <br>
+                        <br>
+                       <span> Vous finirez seuls et vaincus </span>
+                       <br>
+                       <br>
+                       <br>
+                        Retrouvez, sur Spotify, <a href="https://open.spotify.com/artist/69irZ4R8OsrLHjr6VmMmMg?si=FnBOPOR9QN-1AcmmbFb0wQ"> Gaël Faye </a>ainsi que <a href="https://open.spotify.com/artist/5Vby8ALwGN41v2nXpu2TSO?si=bnY6jaxQS7CQ2VPn0QRdyA"> Mélissa Laveaux</a>
+                        </p>
+                    </div>
+                </div>
+             </div>
+
+           <div class="fond"></div>
+             
+        </div>
+    </div>
+
+
+<!-- HAUT -->
+    <div id="duhaut">
+        <div class="fond-haut">
+        <div class="haut-gauche">
+            <img src="img/gael.png" alt="">
+            <h1 class="h1">Gaël Faye</h1>
+            <p>« Quand j’étais ado, dans ma chambre, j’avais un poster de Christiane Taubira » Grand admirateur de la militante et politicienne, Christiane Taubira, depuis son adolescence. C’est avec un grand respect pour ce mentor qu’il lui a proposé une collaboration dans son dernier album « Lundi Méchant ». Ils partagent avec l’autrice du titre Seuls et vaincus, un grand amour pour la poésie, les mots et la littérature. « C’est la plus belle réponse qu’elle peut faire aux intolérances et au racisme. » 
+            <br>
+            <br> 
+            Auteur-Compositeur-Interprète, rappeur et écrivain, Gaël Faye, né au Burundi d’une mère rwandaise et d’un père français. Le début de la guerre civile, et du génocide des Tutsis au Rwanda en 1994, fait fuir la famille qui vient s'installer en France, il a treize ans. Déraciné, Gaël souffre du froid et du béton, ainsi que d'un statut de métis jamais facile à assumer. Il découvre le rap et le hip hop et trouve dans la musique un moyen d'extérioser sa douleur de l'exil et de se reconstruire.  
+            </p>
+        </div>
+        <div class="haut-milieu">
+            <img src="img/christine.png" alt="">
+            <h1>Christina Taubira</h1>
+            <p>« Moi, j’ai fait le choix de l’optimisme. Mais c’est un optimisme de la combativité. Ce n’est pas un optimisme de l’observation ni de l’espoir. Ma vie militante me conduit à considérer qu’il faut constamment chercher la lueur, l’emprise, la petite tige à attraper, le crochet auquel se suspendre. Je m’obstine à faire ça. » 
+            <br> 
+            <br>
+            Pour l’ancienne ministre de la Justice et principale artisane de la loi sur le mariage entre personnes de même sexe, ainsi que de la loi tendant à la reconnaissance de la traite et de l’esclavage en tant que crime contre l’humanité, littérature et engagement auront toujours marché main dans la main. 
+            Authentique et toujours fidèle à elle-même, Christiane Taubira, 68 ans, devenait récemment autrice de chanson pop, en offrant à Gaël Faye un poème intitulé Seuls et vaincus. L’ancienne garde des Sceaux, avec ce poème, s’adressait entre autres « aux racistes qui refusent de voir chez les réfugiés des personnes humaines ».
+            </p>
+        </div>
+        <div class="haut-droite">
+            <img src="img/melissa.png" alt="">
+            <h1 class="h3">Mélissa Laveaux</h1>
+            <p>« J'essaye de rester mystérieuse dans l'explication de certaines chansons. Je garde ce qui est trop secret. »
+            <br>
+            <br> 
+            Mélissa Laveaux grandit à Ottawa, dans un univers majoritairement anglophone, et doit tenter de s'intégrer à ce nouvel environnement, sans rien abandonner pour autant de sa culture d'origine, créole et francophone. Son père lui offre une guitare acoustique à 13 ans. Sa culture musicale grandit au fil des années. Elle pioche dans le folklore haïtien, colporté à l’origine par des orchestres ambulants et réactualisé lors des carnavals. Elle a choisi des chants de résistance du début du xxe siècle, quand la première République noire était sous domination américaine, entre 1915 et 1934.« L’histoire de la première République noire ne se réduit pas à ses dictateurs et à ses tremblements de terre, plaide la volubile Canadienne : « On jetait les journalistes en prison, mais la résistance était coriace : c’est cette facette méconnue que j’ai voulu montrer. »
+            </p>
+        </div>
+        <!-- <h2>Auteurs, interprètes & Compositeur</h2> -->
+        </div>
+    </div>
+    
+<!--GAUCHE-->
+    <div id="degauche">
+        <div class="fond-gauche">
+        <h1> <span class="h1-partie1"> A propos du </span><br><span class="h1-partie2"> Projet Lyrics</span></h1>
+        <div class="image-gauche"><img src="img/extrait_moodboard_1.png" class="image-gauche-1" alt=""><img src="img/extrait_moodboard.png" class="image-gauche-2" alt=""></div>
+        <div class="p-gauche"><p>Le Projet Lyrics est un projet individuel de première année de DUT MMI (formation dans le Multimédia et les Métiers d'Internet). L'idée est de créer un site illustrant les paroles d'une chanson. De la conception à la réalisation finale, le projet est entre les mains de l'étudiant. Il s'agit de faire prendre conscience aux étudiants que la réalisation d'un site web comporte trois aspect distincts : Le Contenu, Le Design, et La Technique. 
+            <br>
+            <br>
+        Concernant mon Projet Lyrics, la chanson sur laquelle je suis tombée au hasard est celle de Gaël Faye : Seuls & Vaincus. La chanson, si ce n'est la poésie, est riche de sens et les mots qui y inscrits sont durs mais empreint de vérité. D'une réelle vérité, la chanson de racisme, et elle confronte les personnes aux idées aussi saugrenues qu'intolérantes, et elle leur dit comment il finiront leur vie : Seuls et vaincus. Ils seront vaincus par l'amour qui découlera d'un futur où leurs propres enfants se marieront et leur offriront de beaux enfants métisses. La chanson commence et finit par la phrase : Vous finirez seuls et vaincus, donnons une sensation de continuité entre le début et la fin de cette dernière, une boucle qui ne cesse de se répéter et qui ne cessera que lorsqu'on ne fera plus face à d'autant d'intolérance. Cette poésie m'a beaucoup fait pensé à des slogans, crié, hurlé à pleins poumons durant diverses manifestations. C'est une chanson, qui au delà depointer le racisme notoire de certaines personnes, politique ou non. C'est une chanson qui pointe du doigt, finalement, toute forme d'intolérance.
+        <br>
+        <br>
+        Et c'est pourquoi mon inspiration première est venu des différentes pancartes utilisé lors de manifestations diverse. Que ça soit pour le mariage pour tous, la dénonciation des agressions sexistes et mysogines ou des marches contre le racisme tel que le "Black Lives Matter" ou "Asian Lives Matter", ses marches, ses manifestations sont tristement nombreuses. Et il n'est pas encore arrivé le jour où nous n'aurons plus à protesté contre des faits, des dires, des choses aussi absurdes que le racisme, l'homophobie, ou l'islamophobie. Un jour, peut-être, tout les êtres humains seront égaux une bonne fois pour toute et nous n'aurons plus à nous indigner contre des pseudo-humanistes qui créent et tracent les différences entre nous.
+        <br>
+        <br>
+        Vous trouverez ci-contre, le moodboard et une sélection de pancartes qui ont pu être vu lors de manifestations. Ses images sont à titre informative sur comment la réflexion de de ce site s'est faite. L'idée était de principalement mettre les paroles au coeur du site. Les paroles sont assez impactante par elles-mêmes sans qu'elles n'aient besoin d'être illustré, ou mise en valeur. Je ne voulais et je ne veux toujours pas de fioriture ou quoique ce soit qui attirerait le regard sur autre chose que les paroles de la chanson. Au niveau des couleurs, l'idée était de rester sur deux couleurs particulière, un bleu-turquoise ainsi qu'un orange, ces deux couleurs se complémentant et offrant deux lecture possibles complimentaient les paroles. Le bleu est souvent associé à la tristesse, comme la période bleue de Picasso, tandis que l'orange est plus associé au renouveau, au ciel lorsque le soleil revient à la surface de l'horizon pour nous sauver de la nuit noire. La chanson est emplie de tristesse mais aussi d'une envie, d'un désir d'illuminer notre futur. </p></div>
+        </div>
+    </div>
+
+<!--DROITE-->
+    <div id="dedroite">
+        <div class="fond-droite">
+            <div class="cote-gauche">
+                <div class="cote-gauche-interieur">
+                    <p><span> Musique :</span>
+                    <br>
+                    <br>
+                    Gaël Faye →<a href="https://www.instagram.com/gaelfaye/?hl=fr"> Son instagram</a>
+                    <br>
+                    <br>
+                    Mélissa Laveaux → <a href="https://www.instagram.com/melissalaveaux/?hl=fr">Son instagram</a>
+                    <br>
+                    <br>
+                    <span> Photographie : </span>
+                    <br>
+                    <br>
+                    Victor Pattyn → <a href="https://victorpattyn.com">Son site web</a>
+                    <br>
+                    <br>
+                    Romain Staros Staropoli → <a href="https://www.staros.fr">Son site web</a>
+                    <br>
+                    <br>
+                    Arnaud Meyer → <a href="https://www.staros.fr">Son site web</a>
+                    <br>
+                    <br>
+                    <span> Dessins : </span>
+                    <br>
+                    <br>
+                    Hajar Bakhii
+                </p></div>
+                <h1 class="h1-cote-gauche">Crédits</h1> 
+                
+            </div>
+            <div class="cote-droit">
+                <h1 class="h1-cote-droit"> A propos de la <br> <span class="h1modif">développeuse</span></h1>
+                <div class="cote-droit-interieur">
+                    <p> <span> Hajar B., étudiante en DUT MMI → <a href="https://etudiant.u-pem.fr/~hbakhii/cv/">Mon CV Interactif</a></span>
+                        <br>
+                        <br>
+                        Le site sur lequel vous êtes tombés et celui que j'ai proposé comme réponse au Projet Lyrics et à toutes les problématiques qu'il engendre. Ne connaissant ni la chanson, ni l'artiste, j'avoue avoir été surprise de découvrir cette chanson et tout le message d'humanisme qu'il porte. J'ai été touché et j'ai encore plus voulu rendre hommage à cette chanson en faisant de mon mieux pour la portrayer. Il n'a pas été simple de trouver le concept du site, et je n'en suis pas encore totalement ravie. Pas mal de petits détails sont encore à peaufiner, mais dans l'ensemble je suis quand même assez contente. 
+                        <br>
+                        <br>
+                        Le DUT MMI est une formation axée sur le web comme son nom : "Multimédia et Métiers de L'Internet" l'indique. C'est une formation pluridisciplinaire dans laquelle on touche à tout ce qui a attrait au multimédia et à la culture internet. Le Projet Lyrics est un projet de l'unité d'enseignement nommé : Intégration Web. C'est une unité d'enseignement assez ciblé le web développement, du front en particulier. Ce projet est un des premiers dans la matière, en totale autonomie, dans une période de temps assez importante.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+   </body>
+</html>
